@@ -4,8 +4,8 @@ clc
 
 % gauss seidel method for n of equations
 
-no_iter = input('no iter \n');
-no_equ = input('no equ \n');
+no_iter = input('Enter Number of iteration \n');
+no_equ = input('Enter Number of equations \n');
 x = zeros(1, no_equ); %fixed size array
 x_old = zeros(1, no_equ); %fixed size array
 
