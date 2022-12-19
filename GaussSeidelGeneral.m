@@ -16,8 +16,10 @@ end
 Augmented_matrix = input('Enter Augmented matrix\n');
 
 for i = 1:no_iter
+  fprintf('==== Iteration no. %d ====\n', i)
   x_old = x;
   for j = 1:no_equ
+      
       x(j) = Augmented_matrix(j, no_equ + 1);
       for r = 1:no_equ
          if(r ~= j)
@@ -25,9 +27,8 @@ for i = 1:no_iter
          end  
       end
       x(j) = x(j) / Augmented_matrix(j,j);
-      
       err = abs( (x(j) - x_old(j) ) / x(j) ) * 100;
-      fprintf('==== Iteration no. %d ====/n', i)
+      
       fprintf('x%d = %4.6f \n',j,x(j))
       fprintf('Err of x%d = %4.6f \n',j,err)
   end
