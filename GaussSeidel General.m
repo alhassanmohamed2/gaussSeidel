@@ -27,7 +27,7 @@ for i = 1:no_iter
       x(j) = x(j) / Augmented_matrix(j,j);
       
       err = abs( (x(j) - x_old(j) ) / x(j) ) * 100;
-      fprintf('============ Iteration no. %d/n', i)
+      fprintf('==== Iteration no. %d ====/n', i)
       fprintf('x%d = %4.6f \n',j,x(j))
       fprintf('Err of x%d = %4.6f \n',j,err)
   end
